@@ -17,12 +17,12 @@ spec:
             - "ALL"
         image: gcr.io/kubebuilder/kube-rbac-proxy:v0.15.0
         args:
-        - "--secure-listen-address=0.0.0.0:8443"
+        - "--secure-listen-address=0.0.0.0:443"
         - "--upstream=http://127.0.0.1:8080/"
         - "--logtostderr=true"
         - "--v=0"
         ports:
-        - containerPort: 8443
+        - containerPort: 443
           protocol: TCP
           name: https
         resources:
